@@ -72,3 +72,41 @@ d$
 
 # 5.1 execute external commands
 - `:! [command]` : [command] が実行される
+
+# 5.2 write to other files
+- `:w TEST` : TESTはファイル名. TESTというファイルにbufferの内容を書き込む
+
+# 5.3 selected write
+- vモーションと :w [filename]で選択領域を別ファイルとして保存する
+- vを押すとvisualモードになる
+- カーソルを移動すると選択領域を変化させることができる
+- 選択範囲に対してオペレータを適用できる
+
+# 5.4 files import and merge
+- `:r [file]` : カーソル位置にファイルの中身を挿入する
+
+# 6.1 open command
+- `o` : カーソルの下の行が開いて挿入モードになる
+- `O` : カーソルの上の行が開いて挿入モードになる
+
+# 6.2 add command
+- `a` : カーソルの後ろで挿入モードに遷移する
+
+# 6.3 other replace methods
+- `R` : 複数文字の置換. 置換モードに遷移し, カーソル下の文字をタイプした文字で置換する. ESCでnormalモードに遷移
+
+# 6.4 text copy and paste
+- `y` : 選択領域を yank
+	- y をオペレータとして操作もできる
+- `p` : カーソル位置に yank した内容をpaste
+
+# 6.5 set options
+- 検索時に `:set ic` としてオプションを設定すると検索時に大文字と小文字の区別をしない
+- 検索時に `:set is` としてオプションを設定すると検索フレーズにマッチしている部分を表示する
+- 検索時に `:set hls` としてオプションを設定するとマッチするすべてを強調表示する
+- 上記のオプションたちを無効化したいときは `no` を頭につけてオプションを設定する
+
+# 7.1 online help command
+- `:help [command]` : :help単体 もしくは コマンド名, insert-index, user-manual等の文字列を入れるとヘルプが開く
+
+# 7.2 boot script
