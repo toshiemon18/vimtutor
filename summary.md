@@ -64,3 +64,11 @@ d$
 - `%` : 対応する), ], }の上でタイプ
 
 # L4.4 fix typo
+- `:s/old/new` : カーソル行で最初に見つかった old を newに置換する
+- `:s/old/new/g` : 行内のすべての old を new に置換する
+- `#,@s/old/new/g` : #行目から@行目のoldをすべてnewに置換する
+- `:%s/old/new/g` : ファイル全体で old をすべて newに置換する
+- `:%s/old/new/gc` : ファイル全体で old を1つずつ確認を取りながら置換する
+
+# 5.1 execute external commands
+- `:! [command]` : [command] が実行される
